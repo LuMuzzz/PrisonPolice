@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">智慧巡更</string>
+
+    <string name="welcome">您好，</string>
+    <string name="welcome_tips">欢迎使用智慧巡更</string>
+    <string name="app_login_acc_hint">请输入您的账号</string>
+    <string name="app_login">登录</string>
+    <string name="app_login_psw_hint">请输入您的密码</string>
+</resources>

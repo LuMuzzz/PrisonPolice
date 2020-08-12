@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activity.LoginActivity">
+    <data>
+        <variable
+                name="model"
+                type="com.mz.prisonpolice.login.LoginViewModel"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/login_bg"
+    >
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginTop="119dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="28sp"
+                android:textColor="@color/app_white"
+                android:text="@string/welcome"
+        />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="158dp"
+                android:layout_marginLeft="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/app_white"
+                android:text="@string/welcome_tips"
+        />
+        <EditText
+                android:id="@+id/input_acc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@null"
+                android:hint="@string/app_login_acc_hint"
+                android:singleLine="true"
+                android:text="@={model.accData}"
+                android:textColor="@color/app_white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="17sp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="255dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/divider_color"/>
+
+        <EditText
+                android:id="@+id/input_psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="299dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:hint="@string/app_login_psw_hint"
+                android:singleLine="true"
+                android:text="@={model.pswData}"
+                android:textColor="@color/app_white"
+                android:textColorHint="@color/hint_color"
+                android:textSize="17sp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="324dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@color/divider_color"/>
+
+        <TextView
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="375dp"
+                android:background="@drawable/login_btn_bg"
+                android:text="@string/app_login"
+                android:textColor="#3C80F6"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:onClick="@{model.onLoginClick}"
+        />
+
+    </RelativeLayout>
+
+
+</layout>
